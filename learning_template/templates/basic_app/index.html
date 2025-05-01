@@ -9,8 +9,12 @@
   <h1>Welcome to index</h1>
 </body>
 </html> -->
-{% extends 'basic_app/base.html' %}
-  {% block body_block %}
-       <h1> Welcome to Index page</h1>
-       <h2> This is Index html Showing</h2>
-  {% endblock %}
+{% extends 'basic_app/base.html' %} {% block body_block %}
+{% load my_extras%}
+<h1> Welcome to Index page</h1>
+<h2> This is Index html Showing</h2>
+<p> {{text| title }} </p>
+<p> {{text| upper }} </p>
+<p> {{text| cutt:'world' }} </p>
+<p>{{number| add:'99'}}</p>
+{% endblock %}
